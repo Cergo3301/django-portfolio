@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container text-center">
-<h2> Cergo написал {{ blogs.count }} пост{{ blogs.count|pluralize }}</h2>
+<h2> Количество постов: {{ blogs.count }}</h2>
 
 
 {% for blog in blogs %}
