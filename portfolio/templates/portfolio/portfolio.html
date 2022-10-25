@@ -13,7 +13,11 @@
          {% for proj in projects %}
         <div class="col ">
             <div class="col">
-                <img src="{{ proj.image.url }}" alt="..." class="img-thumbnail">
+                {% if proj.url %}
+                <a href="{{ proj.url }}" target="_blank"><img src="{{ proj.image.url }}" alt="..." class="img-thumbnail"></a>
+                {% else %}
+                <img src="{{ proj.image.url }}" alt="ссылки нет :(" class="img-thumbnail">
+                {% endif %}
             </div>
             <div class="col">
                 <h3>{{ proj.title }}</h3>
