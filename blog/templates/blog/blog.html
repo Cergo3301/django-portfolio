@@ -1,0 +1,19 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container text-center">
+<h2> Cergo написал {{ blogs.count }} пост{{ blogs.count|pluralize }}</h2>
+
+
+{% for blog in blogs %}
+    <div class="container float-start">
+        <img src="{% static 'portfolio/blog.png' %}" class="img-thumbnail w-25 float-start" alt="...">
+        <p class="text-center"><h3>{{ blog.title }}</h3></p>
+        <p class="text-center">{{ blog.description|striptags|truncatechars:50 }}</p>
+        <div class="float-end"><a href="{% url 'blog:detail' blog.id %}"><button type="button" class="btn btn-primary">Читать</button></a></div>
+
+    </div>
+    {% endfor %}
+
+
+{% endblock %}

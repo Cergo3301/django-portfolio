@@ -1,0 +1,22 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container text-center">
+    <img src="{% static 'portfolio/img1.jpg' %}">
+</div>
+  <div class="container">
+  {% for proj in projects %}
+  <div class="card float-start align-top" style="width: 18rem;">
+  <img src="{{ proj.image.url }}" class="card-img-top w-25 h-25" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ proj.title }}</h5>
+    <p class="card-text">{{ proj.description }}</p>
+    {% if proj.url %}
+    <a href="{{ proj.url }}" target="_blank class="btn btn-primary">Go Link</a>
+  {% endif %}
+  </div>
+</div>
+      {% endfor %}
+  </div>
+{% endblock %}
