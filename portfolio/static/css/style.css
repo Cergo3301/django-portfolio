@@ -1,0 +1,107 @@
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* STYLE */
+
+/* FONT
+
+font-family: 'Roboto', sans-serif;
+
+*/
+
+body {
+	background-color: #5688B7;
+}
+
+header > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.menu {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	margin-top: 60px;
+	text-align: center;
+}
+
+.menu > a {
+	text-decoration: none;
+	margin-right: 90px;
+	color: #203788;
+}
+
+.menu:link, :visited {
+	color: #203788;
+}
+
+.menu > a:hover {
+	text-decoration: underline;
+}
+
+.flex_aboume {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.flex_item {
+	align-items: flex-start;
+	margin-right: 80px;
+	max-width: 400px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: white;
+	line-height: 1.5em;
+}
+
+.flex_aboume  img {
+	border-radius: 50%;
+}
