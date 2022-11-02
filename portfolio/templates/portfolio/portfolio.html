@@ -3,44 +3,52 @@
 
 {% block content %}
 
-<!--<div class="aboutme">-->
-<!--    <div class="avatar">-->
-<!--        <img src="{% static 'portfolio/img1.jpg' %}">-->
-<!--    </div>-->
-<!--</div>-->
-
 <div class="flex_aboume">
     <div class="flex_item">
-        <img src="{% static 'portfolio/img1.jpg' %}">
+        <img src="{% static 'portfolio/avatar.jpg' %}">
     </div>
     <div class="flex_item">
-        Обновите страницу, и вы увидите, что кнопки теперь хорошо центрированы, горизонтально и вертикально. Мы сделали это с помощью двух новых свойств
+        <h3>Привет! Меня зовут Сергей. Мне 28 лет</h3>
+        <p>И я занимаюсь web-разработкой сайтов. Пишу на Python. В основном это Django</p>
+        <p>На данный момент я ищу работу в команде разработчиков, чтобы могли подсказать, поправить и направить</p>
+        <p>Мои знания: <br></p>
+        <ul class="list">
+            <li>Django, Django ORM</li>
+            <li>Html, CSS (Bootstrap, Flexbox)</li>
+            <li>MySQL, Postgresql</li>
+            <li>Работа в программах: PyCharm, VS Code</li>
+            <li>Docker, Git, Windows, Linux</li>
+        </ul>
+
     </div>
 
 </div>
+<div class="flex_aboume">
+    <a href="#" class="btn-sendme">Написать мне</a>
+</div>
 
-<!--<h3 class="text-center">Мои проекты</h3>-->
-<!--<div class="container text-center ">-->
-<!--     <div class="row">-->
-<!--         {% for proj in projects %}-->
-<!--        <div class="col ">-->
-<!--            <div class="col">-->
-<!--                {% if proj.url %}-->
-<!--                <a href="{{ proj.url }}" target="_blank"><img src="{{ proj.image.url }}" alt="..." class="img-thumbnail"></a>-->
-<!--                {% else %}-->
-<!--                <img src="{{ proj.image.url }}" alt="ссылки нет :(" class="img-thumbnail">-->
-<!--                {% endif %}-->
-<!--            </div>-->
-<!--            <div class="col">-->
-<!--                <h3>{{ proj.title }}</h3>-->
-<!--            </div>-->
-<!--            <div class="col ">-->
-<!--                {{ proj.description }}-->
-<!--            </div>-->
-<!--        </div>-->
-<!--          {% endfor %}-->
-<!--     </div>-->
-<!--</div>-->
+<div class="projects-title">Мои проекты</div>
+<div class="projects">
+    {% for proj in projects %}
+        <div class="project-card">
+            <div>
+                {% if proj.url %}
+                    <a href="{{ proj.url }}" target="_blank"><img src="{{ proj.image.url }}" alt="...">
+                {% else %}
+                    <img src="{{ proj.image.url }}" alt="ссылки нет :(">
+                {% endif %}
+            </div>
+            <div class="card-title">
+                {{ proj.title }}
+            </div>
+            <div class="card-description">
+                {{ proj.description }}
+            </div>
+        </div>
+    {% endfor %}
+    
+
+</div>
 
 
 {% endblock %}
