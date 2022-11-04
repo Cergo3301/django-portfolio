@@ -1,0 +1,38 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+
+{% block content %}
+  {% if site_message %}
+  <div>{{ site_message }}</div>
+  {% endif %}
+  <form action="{% url 'sendemail' %}" method="post">
+    {% csrf_token %}
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <label for="your_name">Ваше имя: </label>
+        </div>
+        <div class="col">
+          <input id="your_name" type="text" name="your_name">
+        </div>
+        <div class="col">
+          <label for="your_email">Ваша почта: </label>
+        </div>
+        <div class="col">
+          <input type="email" id="your_email" name="your_email">
+        </div>
+        <div class="col">
+          <label for="message">Ваше сообщение</label>
+        </div>
+        <div class="col">
+          <textarea rows="10" cols="50" id="message" name="message"></textarea>
+        </div>
+
+        <div class="col">
+          <button type="submit">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endblock %}
