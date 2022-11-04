@@ -18,7 +18,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('KEY_DJANGO')
+SECRET_KEY = 'django-insecure-@@-#&zutca21+sdf*y7%b2t^k7r6aw$$1sz58g==g+&y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
