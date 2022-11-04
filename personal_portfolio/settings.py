@@ -13,13 +13,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = os.getenv(EMAIL_HOST_USER)
-EMAIL_HOST_PASSWORD = os.getenv(EMAIL_HOST_PASSWORD)
+
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv(KEY_DJANGO)
+SECRET_KEY = os.getenv('KEY_DJANGO')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
