@@ -10,14 +10,6 @@
     <title>Title</title>
 </head>
 <body>
-<!--    <header>-->
-<!--        <img src="{% static 'portfolio/bg.png' %}" alt="background">-->
-<!--    </header>-->
-<!--    <nav class="menu">-->
-<!--        <a href="{% url 'portfolio' %}">Home</a>-->
-<!--        <a href="{% url 'blog:blog' %}">Blog</a>-->
-<!--        <a href="{% static 'portfolio/Resume.pdf' %}">Resume</a>-->
-<!--    </nav>-->
 <div class="header">
     <div class="header__item">
         <a href="{% url 'portfolio' %}"><img src="{% static 'portfolio/Logo.png' %}" alt="" class="logo"></a>
@@ -47,10 +39,6 @@
     </div>
 </div>
 
-<!--<div class="button__sendme">-->
-<!--    <a href="{% url 'sendemail' %}" class="btn__sendme">Написать мне</a>-->
-<!--    </a>-->
-<!--</div>-->
 {% block content %}
 
 {% endblock %}
