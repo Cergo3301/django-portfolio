@@ -3,15 +3,21 @@
 
 {% block content %}
 
-<div class="flex_aboume">
-    <div class="flex_item">
-        <img src="{% static 'portfolio/avatar.jpg' %}">
-    </div>
-    <div class="flex_item">
-        <h3>Привет! Меня зовут Сергей. Мне 28 лет</h3>
-        <p>И я занимаюсь web-разработкой сайтов. Пишу на Python. В основном это Django</p>
-        <p>На данный момент я ищу работу в команде разработчиков, чтобы могли подсказать, поправить и направить</p>
-        <p>Мои знания: <br></p>
+<div class="section">
+    <div class="section__text">
+        <div class="section__title">
+            Приветствую
+        </div>
+        <div class="text__item">
+            Меня зовут Сергей. Мне 28 лет<br>
+Я занимаюсь web-разработкой сайтов
+Пишу на Python. В основном это Django
+
+        </div>
+        <div class="text__item">
+            На данный момент я ищу работу в команде разработчиков,
+чтобы могли подсказать, поправить и направить
+            <p>Мои знания: <br></p>
         <ul class="list">
             <li>Django, Django ORM</li>
             <li>Html, CSS (Bootstrap, Flexbox)</li>
@@ -19,36 +25,41 @@
             <li>Работа в программах: PyCharm, VS Code</li>
             <li>Docker, Git, Windows, Linux</li>
         </ul>
-
+        </div>
+    </div>
+    <div class="avatar">
+        <img src="{% static 'portfolio/Ellipse.png' %}" class="avatar-bg">
+        <img src="{% static 'portfolio/avatar.jpg' %}" class="avatar-img">
     </div>
 
 </div>
-<div class="flex_aboume">
-    <a href="{% url 'sendemail' %}" class="btn-sendme">Написать мне</a>
+<div class="section__sendme">
+    <a href="{% url 'sendemail' %}" class="btn__sendme">Написать мне</a>
 </div>
 
-<div class="projects-title">Мои проекты</div>
-<div class="projects">
-    {% for proj in projects %}
-        <div class="project-card">
-            <div>
-                {% if proj.url %}
-                    <a href="{{ proj.url }}" target="_blank"><img src="{{ proj.image.url }}" alt="...">
-                {% else %}
-                    <img src="{{ proj.image.url }}" alt="ссылки нет :(">
-                {% endif %}
-            </div>
-            <div class="card-title">
-                {{ proj.title }}
-            </div>
-            <div class="card-description">
-                {{ proj.description }}
-            </div>
+<div class="wrapper__head_title">
+    <img src="{% static 'portfolio/line.png' %}">
+    <div class="head_title">
+        Мои проекты
+    </div>
+</div>
+<div class="project">
+    <div class="project__img">
+        {% for proj in projects %}
+        <div class="item">
+            {% if proj.url %}
+            <a href="{{ proj.url }}" target="_blank"><img src="{{ proj.image.url }}" class="item__img"></a>
+            {% else %}
+            <img src="{{ proj.image.url }}" class="item__img">
+            {% endif %}
+            <div class="item__title">{{ proj.title }}</div>
+            <div class="item__description">{{ proj.description }}</div>
         </div>
-    {% endfor %}
-    
-
+        {% endfor %}
+    </div>
 </div>
+
+
 
 
 {% endblock %}

@@ -5,24 +5,54 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
     <title>Title</title>
 </head>
 <body>
-    <header>
-        <img src="{% static 'portfolio/bg.png' %}" alt="background">
-    </header>
-    <nav class="menu">
-        <a href="{% url 'portfolio' %}">Home</a>
-        <a href="{% url 'blog:blog' %}">Blog</a>
-        <a href="{% static 'portfolio/Resume.pdf' %}">Resume</a>
-    </nav>
+<!--    <header>-->
+<!--        <img src="{% static 'portfolio/bg.png' %}" alt="background">-->
+<!--    </header>-->
+<!--    <nav class="menu">-->
+<!--        <a href="{% url 'portfolio' %}">Home</a>-->
+<!--        <a href="{% url 'blog:blog' %}">Blog</a>-->
+<!--        <a href="{% static 'portfolio/Resume.pdf' %}">Resume</a>-->
+<!--    </nav>-->
+<div class="header">
+    <div class="header__item">
+        <a href="{% url 'portfolio' %}"><img src="{% static 'portfolio/Logo.png' %}" alt="" class="logo"></a>
+    </div>
+    <div class="header__item">
+        <div class="menu">
+            <ul>
+                <div>
+                    <a href="{% url 'portfolio' %}"><li>Home</li></a>
+                </div>
+                <div>
+                    <a href="{% url 'blog:blog' %}"><li>Blog</li></a>
+                </div>
+                <div>
+                    <a href="{% static 'portfolio/Resume.pdf' %}" target="_blank"><li>Resume</li></a>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="header__item">
+        <a href="https://t.me/wongshell" target="_blank" class="link__contactme">
+            <div class="contactme">
+            <img src="{% static 'portfolio/telegram-svg.svg'%}" class="telegram-svg">
+                <p>Contact me</p>
+        </div>
+        </a>
+    </div>
+</div>
 
-    {% block content %}
+<!--<div class="button__sendme">-->
+<!--    <a href="{% url 'sendemail' %}" class="btn__sendme">Написать мне</a>-->
+<!--    </a>-->
+<!--</div>-->
+{% block content %}
 
-    {% endblock %}
-
+{% endblock %}
 </body>
 </html>

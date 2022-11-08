@@ -1,125 +1,146 @@
+/* FONTS
+font-family: 'Anton', sans-serif;
+font-family: 'Kanit', sans-serif;
+*/
 body {
-	background-color: #5688B7;
-	font-family: 'Roboto', sans-serif;
+	background-color: #282C33;
+	color: #fff;
+	margin-right: 200px;
+	margin-left: 200px;
+	margin-top: 60px;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.header {
+	display: flex;
+	font-family: 'Anton', sans-serif;
+	font-size: 20px;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+.header__item {
+
+}
+
+.menu ul {
+	display: flex;
+	list-style-type: none;
+}
+
+.menu li {
+	margin-right: 60px;
+}
+
+.contactme {
+	display: flex;
+}
+.link__contactme p {
+	text-decoration: underline;
+	text-decoration-color: #892427;
+	text-decoration-thickness: 3px;
+}
+
+.section {
+	display: flex;
+	margin-top: 130px;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 410px;
+}
+.section__text {
+	flex-direction: column;
+	font-family: 'Kanit', sans-serif;
+	font-size: 20px;
+	max-width: 390px;
+}
+
+.section__title {
+	font-family: 'Kanit', sans-serif;
+	font-size: 40px;
+	font-weight: 600;
+}
+.text__item {
+	margin-top: 20px;
+	font-weight: 400;
+}
+
+.avatar {
+	display: flex;
+	margin-right: 200px;
+	align-items: center;
+	justify-content: center;
+}
+
+.avatar-img {
+	position: absolute;
+	max-width: 200px;
+	max-height: 200px;
+	border-radius: 20px;
+}
+.avatar-img:hover {
+	max-width: 400px;
+	max-height: 400px;
+}
+.section__sendme {
+	display: block;
+	text-align: center;
+	top: 100px;
+}
+
+.btn__sendme {
+	padding: 20px 40px;
+	background-color: #892427;
+	border-radius: 30px;
+	outline: 3px solid black;
+	font-family: 'Kanit', sans-serif;
+	font-size: 20px;
 	font-weight: bold;
 }
 
-header > img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.wrapper__head_title {
+	display: flex;
+	justify-content: center;
 }
 
-.menu {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-	margin-top: 60px;
+.head_title {
+	margin-top: 100px;
+	font-family: 'Kanit', sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	position: absolute;
+}
+
+.project {
+	position: relative;
 	text-align: center;
 }
 
-.menu > a {
-	text-decoration: none;
-	margin-right: 90px;
-	color: #203788;
-}
-
-.menu:link, :visited {
-	color: #203788;
-}
-
-.menu > a:hover {
-	text-decoration: underline;
-}
-
-/* ABOUT ME */
-
-.flex_aboume {
+.project__img {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 100px;
-}
-
-.flex_item {
-	margin-right: 80px;
-	max-width: 400px;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: white;
-	line-height: 1.5em;
-}
-
-
-.flex_aboume img {
-	border-radius: 50%;
-	max-width: 300px;
-	max-height: 300px;
-}
-
-.btn-sendme {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 	align-items: center;
-	color: black;
-	font-size: 32px;
-	background-color: #4B9529;
-	width: 260px;
-	height: 65px;
-	border: 2px solid black;
-	border-radius: 50px 50px 50px 50px;
-	text-decoration: none;
+	justify-content: space-between;
 }
-
-.btn-sendme:hover {
-	background-color: black;
-	color: #4B9529;
-}
-
-/* PROJECTS */
-
-.projects {
-	margin-top: 60px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+.item {
+	max-width: 200px;
 	align-items: baseline;
 }
-
-.projects-title {
-	margin-top: 50px;
-	text-align: center;
-	font-size: 4em;
-	color: white;
-}
-
-.projects img {
+.item__img {
 	max-width: 200px;
-	max-height: 200px;
 }
-
-.project-card {
-	margin-right: 100px
+.item__title {
+	font-family: 'Kanit', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
 }
-
-.project-card a {
-	text-decoration: none;
-	color: white;
-}
-.project-card a::after, ::before, :active, :visited {
-	color: white;
-}
-
-.card-title {
-	text-align: center;
-	font-size: 1.3em;
-	margin-bottom: 10px;
-}
-
-.card-description {
-	font-size: 0.9em;
-	max-width: 200px;
+.item__description {
+	font-family: 'Kanit', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	align-self: flex-start;
 }
